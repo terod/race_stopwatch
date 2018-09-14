@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- for the main buttons -->
+
+    <LinearLayout
+        android:id="@+id/main_buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/start_all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Start/Stop" />
+
+        <Button
+            android:id="@+id/reset_all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reset" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/clockLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:layout_gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/hour_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="30sp"
+            />
+        
+        <TextView
+            android:id="@+id/hour_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="h"
+            android:textSize="30sp"
+            android:paddingRight="10dp"             
+            />
+
+        <TextView
+            android:id="@+id/min_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00"
+            android:textSize="40sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/sep_view1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textSize="32sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/seconds_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00"
+            android:textSize="32sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/sep_view2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="."
+            android:textSize="32sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/dseconds_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/red"
+            android:textSize="32sp" >
+        </TextView>
+    </LinearLayout>
+
+    <!-- for the list -->
+
+    <LinearLayout
+        android:id="@+id/watch_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <!-- Layout for player 1 -->
+
+                <LinearLayout
+                    android:id="@+id/player1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/player_name1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="player 1 name" />
+
+                    <Button
+                        android:id="@+id/lap_button1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/lap" >
+                    </Button>
+                </LinearLayout>
+
+                <!-- Layout for player 2 -->
+
+                <LinearLayout
+                    android:id="@+id/player2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/player_name2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="player 2 name" />
+
+                    <Button
+                        android:id="@+id/lap_button2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/lap" >
+                    </Button>
+                </LinearLayout>
+
+                <!-- Layout for player 3 -->
+
+                <LinearLayout
+                    android:id="@+id/player3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/player_name3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="player 3 name" />
+
+                    <Button
+                        android:id="@+id/lap_button3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/lap" >
+                    </Button>
+                </LinearLayout>
+
+                <!-- Layout for player 4 -->
+
+                <LinearLayout
+                    android:id="@+id/player4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/player_name4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="player 4 name" />
+
+                    <Button
+                        android:id="@+id/lap_button4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/lap" >
+                    </Button>
+                </LinearLayout>
+
+                <!-- Layout for player 5 -->
+
+                <LinearLayout
+                    android:id="@+id/player5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/player_name5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="player 5 name" />
+
+                    <Button
+                        android:id="@+id/lap_button5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/lap" >
+                    </Button>
+                </LinearLayout>
+
+                <!-- Layout for player 6 -->
+
+                <LinearLayout
+                    android:id="@+id/player6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/player_name6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="player 6 name" />
+
+                    <Button
+                        android:id="@+id/lap_button6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/lap" >
+                    </Button>
+                </LinearLayout>
+
+                <!-- Layout for player 7 -->
+
+                <LinearLayout
+                    android:id="@+id/player7"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/player_name7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="player 7 name" />
+
+                    <Button
+                        android:id="@+id/lap_button7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/lap" >
+                    </Button>
+                </LinearLayout>
+                
+                <!-- Layout for player 8 -->
+
+                <LinearLayout
+                    android:id="@+id/player8"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/player_name8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="player 8 name" />
+
+                    <Button
+                        android:id="@+id/lap_button8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/lap" >
+                    </Button>
+                </LinearLayout>
+                
+                <!-- Layout for player 9 -->
+
+                <LinearLayout
+                    android:id="@+id/player9"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/player_name9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="player 9 name" />
+
+                    <Button
+                        android:id="@+id/lap_button9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/lap" >
+                    </Button>
+                </LinearLayout>
+                
+                <!-- Layout for player 10 -->
+
+                <LinearLayout
+                    android:id="@+id/player10"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/player_name10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="player 10 name" />
+
+                    <Button
+                        android:id="@+id/lap_button10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/lap" >
+                    </Button>
+                </LinearLayout>
+                
+                <!-- Layout for player 11 -->
+
+                <LinearLayout
+                    android:id="@+id/player11"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/player_name11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="player 11 name" />
+
+                    <Button
+                        android:id="@+id/lap_button11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/lap" >
+                    </Button>
+                </LinearLayout>
+                
+                <!-- Layout for player 12 -->
+
+                <LinearLayout
+                    android:id="@+id/player12"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/player_name12"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="player 12 name" />
+
+                    <Button
+                        android:id="@+id/lap_button12"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/lap" >
+                    </Button>
+                </LinearLayout>
+                
+                <!-- Layout for player 13 -->
+
+                <LinearLayout
+                    android:id="@+id/player13"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/player_name13"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="player 13 name" />
+
+                    <Button
+                        android:id="@+id/lap_button13"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/lap" >
+                    </Button>
+                </LinearLayout>
+                
+                <!-- Layout for player 14 -->
+
+                <LinearLayout
+                    android:id="@+id/player14"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/player_name14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="player 14 name" />
+
+                    <Button
+                        android:id="@+id/lap_button14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/lap" >
+                    </Button>
+                </LinearLayout>
+                
+                <!-- Layout for player 15 -->
+
+                <LinearLayout
+                    android:id="@+id/player15"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/player_name15"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="player 15 name" />
+
+                    <Button
+                        android:id="@+id/lap_button15"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/lap" >
+                    </Button>
+                </LinearLayout>
+                
+                
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>
